@@ -1,0 +1,14 @@
+function __ () {
+  var __ = document.getElementById("__");
+  var __ = main.querySelectorAll("__");
+  var i ;
+  for (i=0; i < __.length; i++) {
+    __[i].parameter.property = "__";
+  }
+}
+
+Blue Yonder: rgba(88, 107, 164, 1)
+Dark Cornflower Blue: rgba(50, 67, 118, 1)
+Buff: rgba(245, 221, 144, 1)
+Atomic Tangerine: rgba(246, 142, 95, 1)
+Bittersweet: rgba(247, 108, 94, 1)

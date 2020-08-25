@@ -1,0 +1,162 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#container * {
+  border: 0px dotted red;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: minmax(auto, 20%) 1fr minmax(100px, 30%);
+
+  height: inherit;
+  width: inherit;
+}
+
+#banner, #nav, #main, #footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#banner *, #nav *, #main *, #footer * {
+  display: flex;
+
+  height: 100%;
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+#banner { background-color: yellow;
+  grid-column: -1 / 1;
+  grid-row: 1;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 5px;
+}
+  #banner #logo { background-color: _;
+    height: 100%;
+    width: auto;
+    padding: 0px 20px;
+  }
+    #banner #logo img { background-color: white;
+      height: 4em;
+      width: auto;
+    }
+  #banner #title { background-color: _;
+    display: flex;
+    height: 100%;
+    width: auto;
+
+    padding: 10px;
+
+    align-items: center;
+    justify-content: center;
+  }
+    #banner #title p { background-color: _;
+      height: auto;
+      width: auto;
+
+      font-size: 4em;
+    }
+    #banner #nav { background-color: black;
+      height: 100%;
+      width: 0;
+
+      overflow: hidden;
+      transition: all 0.5s;
+    }
+      #banner #nav #nav-content {
+        flex-direction: row;
+        padding: 2px;
+
+        align-items: center;
+        justify-content: flex-start;
+      }
+        #banner #nav #nav-content #home {}
+          #banner #nav #nav-content #home a {}
+        #banner #nav #nav-content .nav-links { background-color: white;
+          height: auto;
+          width: auto;
+
+          padding: 10px;
+          margin: 2px;
+        }
+          #banner #nav #nav-content .nav-links a {
+          }
+    #banner #open-nav { background-color: _;
+      display: flex;
+      height: 100%;
+      width: auto;
+
+      padding: 10px;
+
+      align-items: center;
+      justify-content: center;
+    }
+      #banner #open-nav span { background-color: _;
+        height: auto;
+        width: auto;
+
+        font-size: 4em;
+      }
+    #banner #close-nav { background-color: _;
+      display: none;
+      height: 100%;
+      width: auto;
+      overflow: hidden;
+
+      padding: 10px;
+
+      align-items: center;
+      justify-content: center;
+    }
+      #banner #close-nav span { background-color: _;
+        height: auto;
+        width: auto;
+
+        font-size: 4em;
+      }
+
+    @media (max-width: 60em) {
+      #banner #title {
+        width: auto;
+      }
+        #banner #title p {
+          font-size: 2em;
+        }
+      #banner #open-nav span {
+        font-size: 2em;
+      }
+      #banner #close-nav span {
+        font-size: 2em;
+      }
+      #banner #logo img {
+        height: 4em;
+      }
+    }
+
+#main { background-color: blue;
+  grid-column: -1 / 1;
+  grid-row: 2;
+
+  height: 1000px;
+}
+  #main #main-content {
+
+  }
+
+#footer { background-color: purple;
+  grid-column: -1 / 1;
+  grid-row: 3;
+}
+  #footer-content {
+
+  }
